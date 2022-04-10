@@ -1,5 +1,6 @@
 import MainNavigation from '@/components/layout/MainNavigation'
 import { ReactChild, ReactFragment, ReactPortal } from 'react'
+import Header from './Header'
 
 function Layout(props: {
   children:
@@ -12,7 +13,7 @@ function Layout(props: {
 }) {
   return (
     <div>
-      <MainNavigation />
+      <Header />
       <main>{props.children}</main>
     </div>
   )

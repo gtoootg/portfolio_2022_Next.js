@@ -1,20 +1,16 @@
 /* eslint-disable @next/next/link-passhref */
-import type { NextPage } from 'next'
 import React from 'react'
-
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 type Props = {
   anchor:Anchor
   navigationItem:JSX.Element;
+  className:string;
 }
 
-const MainNavigationDrawer = ({anchor,navigationItem}:Props) => {
+export default function NavigationDrawer({anchor,navigationItem,className}:Props) {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -37,31 +33,17 @@ const MainNavigationDrawer = ({anchor,navigationItem}:Props) => {
       setState({ ...state, [anchor]: open });
     };
 
-  const list = (anchor: Anchor) => (
-    <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {/* {navigationItem} */}
-      </List>
-    </Box>
-  );
-
   return (
-    <React.Fragment key={anchor}>
+    <>
       <Button onClick={toggleDrawer(anchor, true)}> X </Button>
       <Drawer
         anchor={anchor}
         open={state[anchor]}
         onClose={toggleDrawer(anchor, false)}
+        classes={{ paper: className }}
       >
       {navigationItem}
       </Drawer>
-    </React.Fragment>
+    </>
   );
 }
-
-export default MainNavigationDrawer
