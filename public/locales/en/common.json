@@ -1,5 +1,12 @@
 {
   "test": {
     "test": "test"
+  },
+  "header":{
+    "navigation":{
+      "top":"Top",
+      "profile":"Profile",
+      "portfolio":"Portfolio"
+    }
   }
 }
