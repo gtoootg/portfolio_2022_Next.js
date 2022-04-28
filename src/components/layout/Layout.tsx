@@ -1,6 +1,5 @@
-import MainNavigation from '@/components/layout/MainNavigation'
 import { ReactChild, ReactFragment, ReactPortal } from 'react'
-import Header from './Header'
+import Header from '@/components/header/Header'
 
 function Layout(props: {
   children:
