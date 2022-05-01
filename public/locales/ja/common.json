@@ -15,5 +15,17 @@
     "description1":"三十路に突入したドイツ在住ITエンジニアの自己紹介サイトです",
     "description2":"現在ドイツのスタートアップにてフロントエンジニアとして勤務",
     "description3": "趣味はプログラム・旅行・写真撮影など様々"
+  },
+  "footer": {
+    "contact": "お問い合わせ",
+    "name":"後藤 倫宏",
+    "profile1": "最終学位：機械工学修士課程",
+    "profile2": "フロントエンドエンジニア",
+    "profile3": "msg Systems ag ドイツ・ミュンヘン",
+    "profile4": "email : michihirogoro@yahoo.com",
+    "emailAddress": "メールアドレス",
+    "message": "メッセージ",
+    "submit":"送信",
+    "success": "問い合わせありありがとうございます．お問い合わせ内容確認の上，数日内に返信いたします"
   }
 }
