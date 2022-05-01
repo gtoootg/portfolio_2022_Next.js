@@ -21,9 +21,16 @@
       display: flex;
       align-items: center;
 
-      &_icon,
+      &_icon{
+        margin-left: 2rem;
+        opacity: 0.9;}
       &_text {
         margin-left: 2rem;
+        opacity:0.6;
+      }
+      &_text:hover {
+        border-bottom: solid 1px variables.$white;
+        opacity:1;
       }
     }
   }

@@ -49,7 +49,7 @@ export default function Header() {
     return (
       <>
         <div className={classes.header_container_navigation_text}>
-          <Link href={locale ==='en'? `/${route}`: `/en/${route}`} >
+          <Link href={locale ==='en'? `/ja/${route}`: `/en/${route}`} >
             <h3>{locale ==='en'? '日本語': 'EN'}</h3>
           </Link>
         </div>
