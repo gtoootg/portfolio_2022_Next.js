@@ -1,0 +1,21 @@
+
+
+@mixin imageProperty{
+  position:absolute; 
+  width:50%;
+  transition: 1.5s;
+}
+
+.image{
+
+
+  &_fadeIn{
+    @include imageProperty();
+    opacity:0.9;
+  }
+
+  &_fadeOut{
+    @include imageProperty();
+    opacity:0;
+  }
+}
