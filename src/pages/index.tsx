@@ -8,16 +8,6 @@ function Home() {
 
   return (
     <>
-      <div>
-        <h5>{t<string>('test.test')}</h5>
-      </div>
-      <Link href="" locale="ja">
-        <a>to Japanese</a>
-      </Link>
-      <br />
-      <Link href="" locale="en">
-        <a>to English</a>
-      </Link>
       <TopLayout />
     </>
   )

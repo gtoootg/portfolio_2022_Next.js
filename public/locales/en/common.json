@@ -8,5 +8,12 @@
       "profile": "Profile",
       "portfolio": "Portfolio"
     }
+  },
+  "topLayout": {
+    "title1":"Hello",
+    "title2":"My name is Michihiro Goto",
+    "description1":"I am Japanese, working as a FrontEnd developer living in Munich.",
+    "description2":"Currently, I am looking for a position of Frontend Developer in Munich",
+    "description3": "In this website, you can find about my background and portfolio"
   }
 }

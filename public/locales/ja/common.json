@@ -1,5 +1,19 @@
 {
   "test": {
-    "test": "テスト"
+    "test": "test"
+  },
+  "header": {
+    "navigation": {
+      "top": "Top",
+      "profile": "Profile",
+      "portfolio": "Portfolio"
+    }
+  },
+  "topLayout": {
+    "title1":"Hello",
+    "title2":"My name is Michihiro Goto",
+    "description1":"三十路に突入したドイツ在住ITエンジニアの自己紹介サイトです",
+    "description2":"現在ドイツのスタートアップにてフロントエンジニアとして勤務",
+    "description3": "趣味はプログラム・旅行・写真撮影など様々"
   }
 }
