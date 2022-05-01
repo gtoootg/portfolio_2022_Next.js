@@ -15,5 +15,16 @@
     "description1":"I am Japanese, working as a FrontEnd developer living in Munich.",
     "description2":"Currently, I am looking for a position of Frontend Developer in Munich",
     "description3": "In this website, you can find about my background and portfolio"
+  },
+  "footer": {
+    "contact": "Contact form",
+    "name":"Michihiro Goto",
+    "profile1": "Master of Science in Mechanical Engineering",
+    "profile2": "Frontend Developer for Digital AI assistant bot","profile3": "msg Systems ag",
+    "profile4": "email : michihirogoro@yahoo.com",
+    "emailAddress": "Email Address",
+    "message": "Message",
+    "submit":"Submit",
+    "success": "Thank you for the message. I will reply to you soon!"
   }
 }

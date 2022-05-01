@@ -1,5 +1,6 @@
 import { ReactChild, ReactFragment, ReactPortal } from 'react'
 import Header from '@/components/header/Header'
+import Footer from '../footer/Footer'
 
 function Layout(props: {
   children:
@@ -14,6 +15,7 @@ function Layout(props: {
     <div>
       <Header />
       <main>{props.children}</main>
+      <Footer />
     </div>
   )
 }
