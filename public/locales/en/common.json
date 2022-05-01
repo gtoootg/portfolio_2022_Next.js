@@ -2,11 +2,11 @@
   "test": {
     "test": "test"
   },
-  "header":{
-    "navigation":{
-      "top":"Top",
-      "profile":"Profile",
-      "portfolio":"Portfolio"
+  "header": {
+    "navigation": {
+      "top": "Top",
+      "profile": "Profile",
+      "portfolio": "Portfolio"
     }
   }
 }

@@ -4,12 +4,12 @@ $defaultFontFamily: 'Arial';
 //define colors for material
 $background-black: #2a3139;
 
-$white:white;
+$white: white;
 
 //Resopnsive design
 $pc: 1024px; // PC
 $tab: 680px; // Tablet
-$sp: 480px;  // SmartPhone
+$sp: 480px; // SmartPhone
 
 @mixin pc {
   @media (max-width: ($pc)) {
