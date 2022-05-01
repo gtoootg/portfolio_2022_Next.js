@@ -1,28 +1,51 @@
 import { useState, useEffect } from 'react'
 import ImageSlide from '../common/ImageSlide/ImageSlide'
+import styles from './TopLayout.module.scss'
 
 import croatia from '/public/assets/photo/croatia.jpg'
-import prague from '/public/assets/photo/prague.jpg'
-import { StaticImageData } from 'next/image'
+import desert from '/public/assets/photo/desert.jpg'
 import kyoto from '/public/assets/photo/kyoto.jpg'
-import hongkong from '/public/assets/photo/hongkong.jpg'
+import { useTranslation } from 'next-i18next'
 
 export default function TopLayout() {
-  const [index, setIndex] = useState(0)
+  const { t } = useTranslation()
 
-  const images = [croatia, prague, kyoto, hongkong]
-
+  const [index, setIndex] = useState<number>(0)
   const setIndexHandler = () => {
-    if (index === 3) {
-      setIndex(0)
-    } else {
-      setIndex(index + 1)
-    }
+    setIndex((prev) => (prev + 1) % images.length)
   }
+  useEffect(() => {
+    const interval = setInterval(setIndexHandler, 6000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const images = [croatia, desert, kyoto]
+
+  const descriptions: string[]=[
+    t<string>('topLayout.description1'),
+    t<string>('topLayout.description2'),
+    t<string>('topLayout.description3'),
+  ]
 
   return (
-    <>
-      <ImageSlide images={images} />
-    </>
+    <div className={styles.topLayout}>
+      <div className={styles.topLayout_text}>
+        <h1 className={styles.topLayout_text_title}>
+          {t<string>('topLayout.title1')}
+        </h1>
+        <h1 className={styles.topLayout_text_title}>
+        {t<string>('topLayout.title2')}
+        </h1>
+        {descriptions.map((description,index)=>
+        <h4 className={styles.topLayout_text_description}>
+          {description}
+        </h4>
+        )}
+      </div>
+      <div className={styles.topLayout_imageSlide}>
+        <ImageSlide images={images} index={index}/>
+      </div>
+      
+    </div>
   )
 }

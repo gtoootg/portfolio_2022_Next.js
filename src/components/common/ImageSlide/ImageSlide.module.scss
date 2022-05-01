@@ -1,7 +1,8 @@
 @mixin imageProperty {
   position: absolute;
-  width: 50%;
+  width: 100%;
   transition: 1.5s;
+
 }
 
 .image {

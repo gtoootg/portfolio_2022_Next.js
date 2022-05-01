@@ -1,23 +1,15 @@
 import { StaticImageData } from 'next/image'
 import Image from 'next/image'
 
-import { useState, useEffect } from 'react'
-
 import styles from './ImageSlide.module.scss'
 
 interface ImageSlideProps {
-  images: StaticImageData[] | string[]
+  images: StaticImageData[] | string[],
+  index: number
 }
 
-export default function ImageSlide({ images }: ImageSlideProps) {
-  const [index, setIndex] = useState(0)
-  const setIndexHandler = () => {
-    setIndex((prev) => (prev + 1) % images.length)
-  }
-  useEffect(() => {
-    const interval = setInterval(setIndexHandler, 6000)
-    return () => clearInterval(interval)
-  }, [])
+export default function ImageSlide({ images, index }: ImageSlideProps) {
+
 
   return (
     <div>
