@@ -21,7 +21,7 @@ export default function TopLayout() {
 
   const images = [croatia, desert, kyoto]
 
-  const descriptions: string[]=[
+  const descriptions: string[] = [
     t<string>('topLayout.description1'),
     t<string>('topLayout.description2'),
     t<string>('topLayout.description3'),
@@ -34,18 +34,15 @@ export default function TopLayout() {
           {t<string>('topLayout.title1')}
         </h1>
         <h1 className={styles.topLayout_text_title}>
-        {t<string>('topLayout.title2')}
+          {t<string>('topLayout.title2')}
         </h1>
-        {descriptions.map((description,index)=>
-        <h4 className={styles.topLayout_text_description}>
-          {description}
-        </h4>
-        )}
+        {descriptions.map((description, index) => (
+          <h4 className={styles.topLayout_text_description}>{description}</h4>
+        ))}
       </div>
       <div className={styles.topLayout_imageSlide}>
-        <ImageSlide images={images} index={index}/>
+        <ImageSlide images={images} index={index} />
       </div>
-      
     </div>
   )
 }

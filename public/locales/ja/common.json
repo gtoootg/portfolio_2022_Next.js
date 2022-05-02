@@ -10,22 +10,83 @@
     }
   },
   "topLayout": {
-    "title1":"Hello",
-    "title2":"My name is Michihiro Goto",
-    "description1":"三十路に突入したドイツ在住ITエンジニアの自己紹介サイトです",
-    "description2":"現在ドイツのスタートアップにてフロントエンジニアとして勤務",
+    "title1": "Hello",
+    "title2": "My name is Michihiro Goto",
+    "description1": "三十路に突入したドイツ在住ITエンジニアの自己紹介サイトです",
+    "description2": "現在ドイツのスタートアップにてフロントエンジニアとして勤務",
     "description3": "趣味はプログラム・旅行・写真撮影など様々"
   },
   "footer": {
     "contact": "お問い合わせ",
-    "name":"後藤 倫宏",
+    "name": "後藤 倫宏",
     "profile1": "最終学位：機械工学修士課程",
     "profile2": "フロントエンドエンジニア",
     "profile3": "msg Systems ag ドイツ・ミュンヘン",
     "profile4": "email : michihirogoro@yahoo.com",
     "emailAddress": "メールアドレス",
     "message": "メッセージ",
-    "submit":"送信",
+    "submit": "送信",
     "success": "問い合わせありありがとうございます．お問い合わせ内容確認の上，数日内に返信いたします"
-  }
+  },
+  "profile": {
+    "basic":{
+      "name":{"key":"name", "description":"後藤倫宏"},
+      "birthday":{"key":"birthday", "description":"31/01/1992"},
+      "home":{"key": "Home town", "description": "滋賀県大津市"},
+      "address":{"key": "Current Address", "description": "ドイツ・ミュンヘン（在住歴3年）"},
+      "detail":"大学卒業後,3年間自動車部品メーカーにて機械系エンジニアとして勤務. 2019年にドイツの現地法人へと移り，念願のドイツ移住達成．しかしキャリア構築に行き詰まり，コロナ禍を機にプログラミングを独学し，ドイツのスタートアップ企業へ転職．現在フロントエンドエンジニアとしてお気楽に生活しています．"
+    },
+    "education":{
+      "head":{
+        "degree":"学位",
+        "university":"大学",
+        "city":"場所",
+        "year":"在学時期"
+      },
+      "master":{
+        "degree":"機械工学修士",
+        "university":"京都工芸繊維大学",
+        "city":"京都",
+        "year":"2014-2016"
+      },
+      "bachelor":{
+        "degree":"機械工学学部",
+        "university":"京都工芸繊維大学",
+        "city":"京都",
+        "year":"2010-2014"
+      },
+      "detail":"数学・物理が得意というだけで適当に選んだ機械工学の分野ですが，エンジニア大国ドイツへの移住にあたり，機械工学系の学位保持が後に大きな助けとなってくれることに．併せて，国際都市京都ということもあり，留学生も多く，とにかく外国人の友達と交流することに時間を咲き，英語を習得し，いわゆる海外被れとなり，在学中に将来は日本を脱出することを決意"
+    },
+    "career":{
+      "head":{
+        "position":"ポジション",
+        "company":"会社名",
+        "description":"担当内容",
+        "place":"場所",
+        "year":"勤務期間"
+      },
+      "jjp":{
+        "position":"自動車用ハブユニット軸受の設計開発",
+        "company":"株式会社ジェイテクト",
+        "description":"",
+        "place":"大阪　柏原",
+        "year":"2016-2019"
+      },
+      "kd":{
+        "position":"自動車用軸受販売技術",
+        "company":"Koyo Deutshland GmbH",
+        "description":"",
+        "place":"ドイツ　ミュンヘン",
+        "year":"2019-2021"
+      },
+      "msg":{
+        "position":"フロントエンドエンジニア",
+        "company":"msg systems ag",
+        "description":"",
+        "place":"ドイツ　ミュンヘン",
+        "year":"2022より現職"
+      },
+      "detail": "6年努めた機械設計の技術職に嫌気が指し，転職を決意．コロナ禍を機に習得していたプログラミングに強い興味をいだき，IT業界への転職を試みたところ，ドイツのスタートアップ企業から内定をいただく．現在，駆け出しのフロントエンドエンジニアとして勤務し，AIのチャットボットサービスのフロントエンド側の実装，バグ修正などを担当．担当言語はReact,NextJs,TypeScript, jest等"
+    }
+  }  
 }

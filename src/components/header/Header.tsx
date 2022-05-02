@@ -2,33 +2,35 @@ import classes from './Header.module.scss'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn, IconDefinition } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faLinkedinIn,
+  IconDefinition,
+} from '@fortawesome/free-brands-svg-icons'
 import { useRouter } from 'next/router'
 
-
-interface NavigationIconProps{
-  icon: IconDefinition,
-  href: string,
-  fontSize: number,
+interface NavigationIconProps {
+  icon: IconDefinition
+  href: string
+  fontSize: number
   color: string
 }
 
-export function Icon({icon,href,fontSize,color}: NavigationIconProps) {
- 
+export function Icon({ icon, href, fontSize, color }: NavigationIconProps) {
   return (
-          <div className={classes.header_container_navigation_icon}>
-            <Link href={href}>
-              <FontAwesomeIcon
-                icon={icon}
-                style={{ fontSize: fontSize, color: color }}
-              />
-            </Link>
-          </div>
+    <div className={classes.header_container_navigation_icon}>
+      <Link href={href}>
+        <FontAwesomeIcon
+          icon={icon}
+          style={{ fontSize: fontSize, color: color }}
+        />
+      </Link>
+    </div>
   )
 }
 export default function Header() {
   const { t } = useTranslation()
-  const {route, locale} = useRouter()
+  const { route, locale } = useRouter()
 
   function NavigationText() {
     const textItems = [
@@ -49,8 +51,8 @@ export default function Header() {
     return (
       <>
         <div className={classes.header_container_navigation_text}>
-          <Link href={locale ==='en'? `/ja/${route}`: `/en/${route}`} >
-            <h3>{locale ==='en'? '日本語': 'EN'}</h3>
+          <Link locale={locale === 'en' ? 'ja' : 'en'} href={route}>
+            <h3>{locale === 'en' ? '日本語' : 'EN'}</h3>
           </Link>
         </div>
         {textItems.map((textItem, index) => {
@@ -62,7 +64,6 @@ export default function Header() {
             </div>
           )
         })}
- 
       </>
     )
   }
@@ -85,7 +86,14 @@ export default function Header() {
         </div>
         <div className={classes.header_container_navigation}>
           <NavigationText />
-          {icons.map((icon,map) => <Icon icon={icon.icon} href={icon.href} color="white" fontSize={35}/>)}
+          {icons.map((icon, map) => (
+            <Icon
+              icon={icon.icon}
+              href={icon.href}
+              color="white"
+              fontSize={35}
+            />
+          ))}
         </div>
       </div>
     </div>
