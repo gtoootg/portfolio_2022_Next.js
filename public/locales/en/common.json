@@ -10,21 +10,83 @@
     }
   },
   "topLayout": {
-    "title1":"Hello",
-    "title2":"My name is Michihiro Goto",
-    "description1":"I am Japanese, working as a FrontEnd developer living in Munich.",
-    "description2":"Currently, I am looking for a position of Frontend Developer in Munich",
+    "title1": "Hello",
+    "title2": "My name is Michihiro Goto",
+    "description1": "I am Japanese, working as a FrontEnd developer living in Munich.",
+    "description2": "Currently, I am looking for a position of Frontend Developer in Munich",
     "description3": "In this website, you can find about my background and portfolio"
   },
   "footer": {
     "contact": "Contact form",
-    "name":"Michihiro Goto",
+    "name": "Michihiro Goto",
     "profile1": "Master of Science in Mechanical Engineering",
-    "profile2": "Frontend Developer for Digital AI assistant bot","profile3": "msg Systems ag",
+    "profile2": "Frontend Developer for Digital AI assistant bot",
+    "profile3": "msg Systems ag",
     "profile4": "email : michihirogoro@yahoo.com",
     "emailAddress": "Email Address",
     "message": "Message",
-    "submit":"Submit",
+    "submit": "Submit",
     "success": "Thank you for the message. I will reply to you soon!"
+  },
+  "profile": {
+    "basic":{
+      "name":{"key":"name", "description":"Michihiro Goto"},
+      "birthday":{"key":"birthday", "description":"31/01/1992"},
+      "home":{"key": "Home town", "description": "Otsu Japan"},
+      "address":{"key": "Current Address", "description": "Munich, Germany"},
+      "detail":"I grew up in the City of Otsu, where we have the biggest lake in Japan called Lake Biwa. Otsu is adjacent to Kyoto which is well known as the ancient capital of Japan, and it is only 15 minutes by train."
+    },
+    "education":{
+      "head":{
+        "degree":"Degree",
+        "university":"University",
+        "city":"City",
+        "year":"Year"
+      },
+      "master":{
+        "degree":"Master of Sicence in Mechanical Engineering",
+        "university":"Kyoto Institute of Technology",
+        "city":"Kyoto Japan",
+        "year":"Apr.2014 - Mar.2016"
+      },
+      "bachelor":{
+        "degree":"Bachelor of Sicence in Mechanical Engineering",
+        "university":"Kyoto Institute of Technology",
+        "city":"Kyoto Japan",
+        "year":"Apr.2010 - Mar.2014"
+      },
+      "detail":"I majored in Mechanical engineering in Kyoto institute of technology(KIT). During total 6 years of bachelor and master courses in KIT, I spent the precious time to learn the basic of mechanical engineering which led to my current career as automotive engineer in Germany. Not only for this, it was definetely worth being in Kyoto which attracts many international students around the world. Over this 6years in Kyoto, I could nourish my own international mind, and makemany connections with foreign people."
+    },
+    "career":{
+      "head":{
+        "position":"Position",
+        "company":"Company",
+        "description":"Description",
+        "place":"Place",
+        "year":"year"
+      },
+      "jjp":{
+        "position":"Design Engineer of automotive bearings",
+        "company":"JTEKT Cooporation",
+        "description":"",
+        "place":"Osaka Japan",
+        "year":"2016-2019"
+      },
+      "kd":{
+        "position":"Application Engineer of automotive bearings",
+        "company":"Koyo Deutshland GmbH",
+        "description":"",
+        "place":"Munich, Germany",
+        "year":"2019-2021"
+      },
+      "msg":{
+        "position":"Frontend Developer",
+        "company":"msg systems ag",
+        "description":"",
+        "place":"Munich Germany",
+        "year":"2022-current"
+      },
+      "detail": "After 6 years of experience of Mechanical Engineering in Automotive Industry, I got the strong interest of switching my career to different engineering field. Especially, I was strongly attracted to Web application Engineering while I was self-learing coding. So I kicked off my next career as Frontend Developer at msg ag. Currently, I am in charge of Web/Mobile application of Digital AI assistant bot. My main job scope is to implementation of new features and fixtures of bug on customers portal site of our services. My main languages are React.js Next.js, Typescript, as well as unit-testing using Jest"
+    }
   }
 }

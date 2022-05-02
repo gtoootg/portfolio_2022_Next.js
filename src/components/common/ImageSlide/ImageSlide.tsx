@@ -4,13 +4,11 @@ import Image from 'next/image'
 import styles from './ImageSlide.module.scss'
 
 interface ImageSlideProps {
-  images: StaticImageData[] | string[],
+  images: StaticImageData[] | string[]
   index: number
 }
 
 export default function ImageSlide({ images, index }: ImageSlideProps) {
-
-
   return (
     <div>
       {images.map((image, i) => {
