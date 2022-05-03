@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import ImageSlide from '@/components/common/ImageSlide/ImageSlide'
 import styles from './ProfileMain.module.scss'
@@ -11,6 +11,18 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useTranslation } from 'react-i18next';
 
 import profile from '/public/assets/photo/profile.jpg'
+import { Javascript, LogoutSharp } from '@mui/icons-material';
+
+import css from '/public/assets/photo/code/css.png'
+import html from '/public/assets/photo/code/html.png'
+import js from '/public/assets/photo/code/javascript.png'
+import laravel from '/public/assets/photo/code/laravel.png'
+import react from '/public/assets/photo/code/react.png'
+import typescript from '/public/assets/photo/code/typescript.png'
+import nextjs from '/public/assets/photo/code/nextjs.png'
+import kit1 from '/public/assets/photo/kit/KIT_1.jpg'
+import kit3 from '/public/assets/photo/kit/KIT_3.jpg'
+import kit4 from '/public/assets/photo/kit/KIT_4.jpg'
 
 interface SingleAccordionProps {
   title:string,
@@ -24,8 +36,9 @@ function SingleAccordion({title, description}:SingleAccordionProps) {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          style={{border:'solid 0.2px silver',borderRadius:'5px'}}
         >
-          <Typography>{title}</Typography>
+          <Typography><strong>{title}</strong></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -72,7 +85,6 @@ function Basic() {
   )
 }
 
-
 interface tableRowProps{
   row: string[]
 }
@@ -113,17 +125,17 @@ function TableRow({row}:tableRowProps){
 
 function Education() {
   const {t} = useTranslation()
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState<number>(2)
 
-  const PhotoList = []
+  const PhotoList:StaticImageData[] = [kit1,kit3,kit4]
 
-  // const setIndexHandler = () => {
-  //   setIndex((prev) => (prev + 1) / PhotoList.length)
-  // }
-  // useEffect(() => {
-  //   const interval = setInterval(setIndexHandler, 6000)
-  //   return () => clearInterval(interval)
-  // }, [])
+  const setIndexHandler = () => {
+    setIndex((prev) => (prev + 1) % PhotoList.length)
+  }
+  useEffect(() => {
+    const interval = setInterval(setIndexHandler, 6000)
+    return () => clearInterval(interval)
+  }, [])
 
   const educationHead:string[] = [
     t("profile.education.head.degree"),
@@ -152,11 +164,14 @@ function Education() {
         <div className={styles.education__lowerContainer__text}>
           {t<string>('profile.education.detail')}
         </div>
-        {/* <ImageSlide
+        <div          
+          className={styles.education__lowerContainer__image}
+        >
+          <ImageSlide
             images={PhotoList}
             index={index}
-            className={styles.education__lowerContainer__image}
-            /> */}
+          />
+        </div>
       </div>
     </div>
   )
@@ -195,9 +210,19 @@ function Career(){
   return(
     <>
       <Table tableHead={careerHead} rows={[MSG,KD,JJP]}/>
-      <div className={styles.motivation__textContainer}>
+      <div className={styles.career__textContainer}>
         {t<string>('profile.career.detail')}
       </div>
+      <div 
+        className={styles.career__logoContainer}
+        >
+        {logos.map((logo,i) =>
+              <div className={styles.career__logoContainer__logo}>
+                <Image src={logo} objectFit='contain' priority/>
+              </div>
+        )}
+      </div>
+    
     </>
    
   )
@@ -222,28 +247,22 @@ function AccordionGroup(){
 }
 
 
+const logos:StaticImageData[]= [
+  react,nextjs,js,typescript,laravel,html,css
+]
+
 function ProfileMain() {
- 
+ const {t} = useTranslation()
 
   function Introduction() {
     return (
       <div className={styles.profileMain__introduction}>
-        <div  className={styles.profileMain__introduction_image}>
-          <Image src={profile} width={400} height={500}/>
+        <div  className={styles.profileMain__introduction__image}>
+          <Image src={profile} width={400} height={500} layout='responsive' priority/>
         </div>
-        {/* <img id="topImage" src="image/profile.jpg" alt="profile" /> */}
         <div className={styles.profileMain__introduction__textContainer}>
-          <h1>Michihiro Goto</h1>
-          <h2>
-            I am from Japan, and 29 years old living in Munich. After 5 years of
-            my career in Mechanical Engineering field in Japan and Germany, I
-            started having the strong motivation to start new career as Web
-            application developer. Currently, I am seeking positions of Junior
-            Web developer in Munich and made this portfolio to present my
-            motivation and skills of web application using modern language
-            including React Hooks, TypeScript and Laravel. Please do not
-            hesitate to contact me in case of any questions and interest.
-          </h2>
+          <h1>{t<string>('profile.introduction.name')}</h1>
+          <h2>{t<string>('profile.introduction.description')}</h2>
         </div>
       </div>
     )
@@ -255,39 +274,16 @@ function ProfileMain() {
     value:string
   }
 
-  function Accordion({ Id, text, value }: AccordionProps) {
-    return (
-      <div className="accordion-item">
-        <h2 className="accordion-header" id={`heading${Id}`}>
-          <button
-            className="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target={`#collapse${Id}`}
-            aria-expanded="false"
-            aria-controls={`collapse${Id}`}
-          >
-            {value}
-          </button>
-        </h2>
-        <div
-          id={`collapse${Id}`}
-          className="accordion-collapse collapse"
-          aria-labelledby={`heading${Id}`}
-          data-bs-parent="#accordionExample"
-        >
-          <div className="accordion-body">{text}</div>
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className={styles.profileMain}>
-      <Introduction />
-      <div className="accordion"> 
-        <AccordionGroup/>
-      </div> 
+    <div style={{backgroundColor:'whitesmoke'}}>
+      <div className={styles.profileMain}>
+        <div className={styles.profileMain_introduction}>
+          <Introduction />
+        </div> 
+        <div className="accordion"> 
+          <AccordionGroup/>
+        </div> 
+      </div>
     </div>
   )
 }

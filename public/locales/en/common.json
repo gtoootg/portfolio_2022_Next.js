@@ -29,6 +29,10 @@
     "success": "Thank you for the message. I will reply to you soon!"
   },
   "profile": {
+    "introduction":{
+      "name":"Michihiro Goto",
+      "description": "I am from Japan, and 30 years old living in Munich. Currently I am working as a Frontend developer at a startup company in Munich. My life hobby is to travel around the world, and programming which I have been obsessed since I started spending most of my free time at home in Corona pandemic."
+    },
     "basic":{
       "name":{"key":"name", "description":"Michihiro Goto"},
       "birthday":{"key":"birthday", "description":"31/01/1992"},
@@ -55,7 +59,7 @@
         "city":"Kyoto Japan",
         "year":"Apr.2010 - Mar.2014"
       },
-      "detail":"I majored in Mechanical engineering in Kyoto institute of technology(KIT). During total 6 years of bachelor and master courses in KIT, I spent the precious time to learn the basic of mechanical engineering which led to my current career as automotive engineer in Germany. Not only for this, it was definetely worth being in Kyoto which attracts many international students around the world. Over this 6years in Kyoto, I could nourish my own international mind, and makemany connections with foreign people."
+      "detail":"I majored in Mechanical engineering in Kyoto institute of technology(KIT). During total 6 years of bachelor and master courses in KIT, I spent the precious time to learn the basic of mechanical engineering which led to my successful first career as automotive engineer in Germany. Not only for this, it was definetely worth being in Kyoto which attracts many international students around the world. Over this 6years in Kyoto, I could nourish my own international mind, and makemany connections with foreign people."
     },
     "career":{
       "head":{

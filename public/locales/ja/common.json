@@ -29,11 +29,15 @@
     "success": "問い合わせありありがとうございます．お問い合わせ内容確認の上，数日内に返信いたします"
   },
   "profile": {
+    "introduction":{
+      "name":"後藤 倫宏",
+      "description": "滋賀県出身の30歳.ドイツに2019年に移住し,現在フロントエンドエンジニアとしてドイツでWeb開発に従事．趣味はヨーロッパ各地を旅行することと,休日にプログラムに没頭すること．"
+    },
     "basic":{
-      "name":{"key":"name", "description":"後藤倫宏"},
-      "birthday":{"key":"birthday", "description":"31/01/1992"},
-      "home":{"key": "Home town", "description": "滋賀県大津市"},
-      "address":{"key": "Current Address", "description": "ドイツ・ミュンヘン（在住歴3年）"},
+      "name":{"key":"名前", "description":"後藤倫宏"},
+      "birthday":{"key":"生年月日", "description":"31/01/1992"},
+      "home":{"key": "出身", "description": "滋賀県大津市"},
+      "address":{"key": "現居住地", "description": "ドイツ・ミュンヘン（在住歴3年）"},
       "detail":"大学卒業後,3年間自動車部品メーカーにて機械系エンジニアとして勤務. 2019年にドイツの現地法人へと移り，念願のドイツ移住達成．しかしキャリア構築に行き詰まり，コロナ禍を機にプログラミングを独学し，ドイツのスタートアップ企業へ転職．現在フロントエンドエンジニアとしてお気楽に生活しています．"
     },
     "education":{
