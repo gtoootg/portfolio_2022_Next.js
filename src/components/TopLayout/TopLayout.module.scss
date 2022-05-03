@@ -1,17 +1,14 @@
 @use '@/styles/variables';
 
 .topLayout {
-  border: solid 1px red;
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-
   color: variables.$white;
-
+  background-color: whitesmoke;
   &_text {
     width: 1440px;
-    border: solid 1px yellow;
     z-index: 2;
     position: absolute;
     top: 10vh;

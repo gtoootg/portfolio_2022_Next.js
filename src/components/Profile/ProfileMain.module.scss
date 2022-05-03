@@ -1,27 +1,28 @@
 .profileMain {
-  width: 1280px;
   margin: 0 auto;
-
+  padding:20px 0;
+  width:1280px;
   @media (max-width: 600px) {
     width: 97%;
     margin: 0 auto;
   }
 
+
   &__introduction {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px auto;
+    margin: 40px auto;
 
     @media (max-width: 600px) {
       flex-direction: column;
     }
 
-    &_image {
-      position:relative;
-      width: auto;
-      border-radius: 15%;
-      border:solid 1px red;
+    &__image {
+      // position:relative;
+      width: 30rem;
+      border-radius: 10%;
+      // border:solid 1px red;
       overflow: hidden;
       // @media (max-width: 600px) {
       //   width: 70%;
@@ -31,7 +32,7 @@
     &__textContainer {
       margin-left: 5%;
       margin-right: 5%;
-
+      width: 70rem;
       h2 {
         font-size: 20px;
         text-align: justify;
@@ -88,7 +89,8 @@
         width: 30%;
         padding-bottom: (2/3) * 30%;
         position: relative;
-
+        border-radius: 10px;
+        overflow: hidden;
         @media (max-width: 600px) {
           width: 100%;
           padding-bottom: (2/3) * 100%;
@@ -149,6 +151,16 @@
           width: 100%;
           margin-bottom: 10px;
         }
+      }
+    }
+
+    &__logoContainer{
+      position:'relative';
+      display: flex;
+      justify-content: space-between;
+      margin:50px;
+      &__logo{
+        width:100px;
       }
     }
   }

@@ -21,11 +21,11 @@ function FooterRight() {
 
   const icons = [
     {
-      href: 'https://github.com/gtoootg0131',
+      href: 'https://github.com/gtoootg',
       icon: faGithub,
     },
     {
-      href: 'https://www.linkedin.com/in/%E5%80%AB%E5%AE%8F-%E5%BE%8C%E8%97%A4-37b905218/',
+      href: 'https://www.linkedin.com/in/michihiro-goto-37b905218/',
       icon: faLinkedinIn,
     },
   ]
@@ -61,9 +61,11 @@ function FooterRight() {
 
 function Footer() {
   return (
-    <div className={styles.footer}>
-      <FooterLeft />
-      <FooterRight />
+    <div style={{backgroundColor:'whitesmoke'}}>
+      <div className={styles.footer}>
+        <FooterLeft />
+        <FooterRight />
+      </div>
     </div>
   )
 }
